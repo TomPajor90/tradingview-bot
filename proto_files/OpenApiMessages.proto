@@ -1,0 +1,62 @@
+syntax = "proto3";
+package OpenApi;
+
+import "OpenApiModelMessages.proto";
+
+// ✅ Application auth
+message ProtoOAApplicationAuthReq {
+  string clientId = 1;
+  string clientSecret = 2;
+}
+
+message ProtoOAApplicationAuthRes {}
+
+// ✅ Pobieranie konta z tokenem
+message ProtoOAGetAccountListByAccessTokenReq {
+  string accessToken = 1;
+}
+
+message ProtoOAGetAccountListByAccessTokenRes {
+  repeated ProtoOAAccount accounts = 1;
+}
+
+message ProtoOAAccount {
+  int64 ctidTraderAccountId = 1;
+  string accountCurrency = 2;
+}
+
+// ✅ Autoryzacja konta
+message ProtoOAAccountAuthReq {
+  int64 ctidTraderAccountId = 1;
+  string accessToken = 2;
+}
+
+message ProtoOAAccountAuthRes {
+  int64 ctidTraderAccountId = 1;
+}
+
+// ✅ Zlecenie
+message ProtoOANewOrderReq {
+  int64 ctidTraderAccountId = 1;
+  int64 symbolId = 2;
+  int64 volume = 3;
+  int32 orderType = 4;
+  int32 tradeSide = 5;
+  string clientOrderId = 6;
+}
+
+// ✅ Wydarzenia
+message ProtoOAExecutionEvent {
+  int64 ctidTraderAccountId = 1;
+  int64 orderId = 2;
+  int64 positionId = 3;
+  int64 executionId = 4;
+  double filledVolume = 5;
+  double price = 6;
+}
+
+message ProtoOAOrderErrorEvent {
+  int64 ctidTraderAccountId = 1;
+  int64 orderId = 2;
+  int32 errorCode = 3;
+}

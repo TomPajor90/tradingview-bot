@@ -1,0 +1,7 @@
+version: 2
+authtoken: 2xX29Dv03Fo4xvl9hl41qVFTAUT_5n3kehRByHY8guLK3jcUU
+tunnels:
+  tradingbot:
+    addr: 8000
+    proto: http
+    domain: close-workable-haddock.ngrok-free.app

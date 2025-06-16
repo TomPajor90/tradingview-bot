@@ -1,0 +1,5 @@
+[2025-06-02 00:47:34] Access token odświeżony
+[2025-06-04 19:14:23] Access token odświeżony
+[2025-06-05 03:04:43] Access token odświeżony
+[2025-06-06 21:17:25] ✅ Access token odświeżony poprawnie
+[2025-06-16 17:41:42] ✅ Access token odświeżony poprawnie

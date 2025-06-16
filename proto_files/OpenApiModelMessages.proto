@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package OpenApi.Model;
+
+message ProtoOAMarginRate {
+  double leverageInverted = 1;
+  int32 marginRateType = 2;
+  double marginRate = 3;
+  double marginRateExtra = 4;
+  double marginRateOvernight = 5;
+  double marginRateWeekend = 6;
+}
+
+enum ProtoOAPayloadType {
+  PROTO_MESSAGE = 0;
+  PROTO_HEARTBEAT_EVENT = 50;
+
+  // ✅ Najnowsze poprawne ID z dokumentacji:
+  PROTO_OA_GET_ACCOUNT_LIST_BY_ACCESS_TOKEN_REQ = 2100;
+  PROTO_OA_GET_ACCOUNT_LIST_BY_ACCESS_TOKEN_RES = 2101;
+  PROTO_OA_ACCOUNT_AUTH_REQ = 2102;
+  PROTO_OA_ACCOUNT_AUTH_RES = 2103;
+  PROTO_OA_APPLICATION_AUTH_REQ = 2108;
+  PROTO_OA_APPLICATION_AUTH_RES = 2109;
+  PROTO_OA_NEW_ORDER_REQ = 2001;
+  PROTO_OA_EXECUTION_EVENT = 2022;
+  PROTO_OA_ORDER_ERROR_EVENT = 2023;
+  PROTO_OA_ERROR_RES = 1002;
+}

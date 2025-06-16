@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package OpenApi.Common;
+
+message ProtoHeartBeatEvent {
+  int64 timestamp = 1;
+}
+
+message ProtoMessage {
+  int32 payloadType = 1;
+  bytes payload = 2;
+  string clientMsgId = 3;
+}
